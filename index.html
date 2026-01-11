@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản lý Sinh viên - CTU</title>
+
+    <style>
+        /* 1. Cài đặt chung */
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: #e9ecef; /* Màu nền xám nhạt hiện đại */
+            color: #333;
+        }
+
+        /* 2. Header & Logo */
+        header {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-bottom: 3px solid #007bff;
+        }
+        header img { display: block; margin: 10px auto; }
+
+        /* 3. Navigation Bar (Làm ngang menu) */
+        nav {
+            background-color: #343a40;
+            padding: 5px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li { display: inline-block; }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover { background-color: #007bff; }
+
+        /* 4. Bố cục Flexbox chính */
+        .wrapper {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        aside {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            align-self: flex-start; /* Để cột aside không bị kéo dài quá mức */
+        }
+
+        main {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 5. Trang trí Table & Form */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: center;
+        }
+        th { background-color: #007bff; color: white; }
+        tr:hover { background-color: #f8f9fa; }
+
+        form {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fdfdfd;
+        }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea { resize: vertical; min-height: 80px; }
+        
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover { background-color: #218838; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #343a40;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ĐẠI HỌC CẦN THƠ</h1>
+        <img src="images/Logo CTU.png" alt="Logo CTU" width="100">
+    </header>
+
+    <nav>
+        <ul> 
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Quản lý sinh viên</a></li>
+            <li><a href="#">Quản lý học phần</a></li>
+            <li><a href="#">Thống kê</a></li>
+            <li><a href="#">Cài đặt</a></li>
+            <li><a href="#">Đăng xuất</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper"> 
+        <aside>
+            <h3 style="color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 10px;">Trường thành viên</h3>
+            <ul style="padding-left: 20px; line-height: 2;">    
+                <li>Trường Nông Nghiệp</li>
+                <li>Trường Sư Phạm</li>
+                <li>Trường Kinh Tế</li>
+                <li>Trường CNTT & TT</li>
+                <li>Trường Khoa Học Tự Nhiên</li>
+                <li>Trường Thủy Sản</li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2 style="color: brown;">Thông tin học phần học kỳ này</h2> 
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên HP</th>
+                        <th>Số tín chỉ</th>
+                        <th>Giảng viên</th>
+                        <th>Ngày học</th>
+                        <th>Giờ học</th>
+                        <th>Phòng</th>
+                        <th>Điểm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Toán cao cấp</td><td>3</td><td>Nguyễn Văn A</td><td>Thứ Hai</td><td>7:30 - 9:30</td><td>A101</td><td>8.5</td></tr>
+                    <tr><td>2</td><td>Vật lý đại cương</td><td>4</td><td>Trần Thị B</td><td>Thứ Tư</td><td>10:00 - 12:00</td><td>B202</td><td>7.0</td></tr>
+                    <tr><td>3</td><td>Hóa học đại cương</td><td>4</td><td>Lê Văn C</td><td>Thứ Sáu</td><td>13:00 - 15:00</td><td>C303</td><td>9.0</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: #f2f2f2;">
+                        <td colspan="2"><strong>Tổng cộng</strong></td>
+                        <td>11</td>
+                        <td colspan="5">Chúc bạn học tốt tại CTU!</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <form>   
+                <h2 style="color: brown;">Đăng ký học phần mới</h2> 
+                
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required placeholder="Nguyễn Văn A">
+
+                <label for="Student-id">Mã số sinh viên:</label>
+                <input type="text" id="Student-id" name="Student-id" required placeholder="B2500000">
+                
+                <label for="email">Địa chỉ Email:</label>
+                <input type="email" id="email" name="email" required placeholder="nguyenvana@gmail.com">
+
+                <label>Giới tính:</label>
+                <div style="margin: 10px 0;">
+                    <input type="radio" id="male" name="gender" value="male"> Nam
+                    <input type="radio" id="female" name="gender" value="female"> Nữ
+                </div>
+                    
+                <label for="department">Khoa:</label>
+                <select id="department" name="department" required>
+                    <option value="">--Chọn khoa--</option>
+                    <option value="nn">Khoa Nông Nghiệp</option>
+                    <option value="sp">Khoa Sư Phạm</option>
+                    <option value="kt">Khoa Kinh Tế</option>
+                </select>
+
+                <label for="course">Học phần đăng ký:</label>
+                <select id="course" name="course" required>
+                    <option value="">--Chọn học phần--</option>
+                    <option value="toan">Toán cao cấp</option>
+                    <option value="ly">Vật lý đại cương</option>
+                </select>
+
+                <label for="notes">Ghi chú thêm:</label>
+                <textarea id="notes" name="notes" placeholder="Nhập ghi chú nếu có..."></textarea>
+
+                <input type="submit" value="Xác nhận đăng ký">
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Đại học Cần Thơ - Hệ thống Dashboard Sinh viên</p>
+    </footer>
+
+</body>
+</html>
