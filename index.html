@@ -11,41 +11,40 @@
     <style>
         /* --- 1. BIẾN MÀU SẮC & CẤU HÌNH CHUNG --- */
         :root {
-            --primary: #003d7c;       /* Màu xanh CTU */
-            --secondary: #0056b3;     /* Màu phụ trợ */
-            --accent: #e67e22;        /* Màu điểm nhấn (Cam) */
-            --success: #2ecc71;       /* Màu thành công */
-            --text-main: #2d3436;     /* Màu chữ chính */
-            --text-light: #636e72;    /* Màu chữ phụ */
-            --bg-body: #f4f7f6;       /* Màu nền website (nhạt hơn, mát mắt hơn) */
-            --bg-card: #ffffff;       /* Màu nền thẻ */
-            
-            --radius: 12px;           /* Độ bo góc chuẩn */
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Bóng đổ mềm mại */
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng chuyển động mượt */
+            --primary: #003d7c;       
+            --secondary: #0056b3;     
+            --accent: #e67e22;        
+            --success: #2ecc71;       
+            --text-main: #2d3436;     
+            --text-light: #636e72;    
+            --bg-body: #f4f7f6;       
+            --bg-card: #ffffff;             
+            --radius: 12px;           
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
         }
 
         * { box-sizing: border-box; }
         
         body {
-            font-family: 'Be Vietnam Pro', sans-serif;
+            font-family: 'Be Vietnam Pro', sans-serif; 
             margin: 0;
-            background-color: var(--bg-body);
+            background-color: var(--bg-body); 
             color: var(--text-main);
             line-height: 1.6;
         }
 
         /* --- 2. HEADER & NAVIGATION --- */
         header {
-            background: var(--bg-card);
+            background: var(--bg-card);    
             padding: 20px;
             text-align: center;
             border-bottom: 3px solid var(--primary);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03); 
         }
-        header h1 { margin: 0; color: var(--primary); font-weight: 700; font-size: 1.8rem; }
+        header h1 { margin: 0; color: var(--primary); font-weight: 700; font-size: 1.8rem; } 
 
-        nav { background: #2d3436; position: sticky; top: 0; z-index: 100; }
+        nav { background: #2d3436; position: sticky; top: 0; z-index: 100; } 
         nav ul {
             display: flex; justify-content: center; list-style: none; padding: 0; margin: 0;
             flex-wrap: wrap;
@@ -58,14 +57,14 @@
         nav ul li a:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
 
         /* --- 3. LAYOUT CHÍNH (GRID SYSTEM) --- */
-        .wrapper {
+        .wrapper { 
             display: flex; max-width: 1200px; margin: 40px auto; padding: 0 20px; gap: 30px;
         }
         aside { flex: 1; height: fit-content; }
         main { flex: 3; }
 
-        /* Card Style chung cho cả Sidebar và Main */
-        .card {
+        /* Card Style chung */
+        .card {    
             background: var(--bg-card); padding: 30px;
             border-radius: var(--radius); box-shadow: var(--shadow);
             margin-bottom: 30px; animation: fadeInUp 0.6s ease;
@@ -108,14 +107,13 @@
         table { width: 100%; border-collapse: collapse; }
         th { background: #f8fafc; color: var(--primary); padding: 16px; text-align: left; font-weight: 600; border-bottom: 2px solid #e0e0e0; }
         td { padding: 16px; border-bottom: 1px solid #f0f0f0; color: #444; }
-        /* Zebra Striping: Màu xen kẽ cho dòng chẵn */
         tbody tr:nth-child(even) { background-color: #fcfcfc; }
         tbody tr:hover { background-color: #f1f7fd; }
 
         /* --- 7. FORM & INPUTS --- */
         h2 { color: var(--primary); display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; margin-top: 0; }
         
-        .form-group { margin-bottom: 20px; }
+        .form-group { margin-bottom: 20px; } 
         label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 0.95rem; }
         
         input, select {
@@ -123,14 +121,13 @@
             font-family: inherit; font-size: 1rem; transition: var(--transition);
             background-color: #fdfdfd;
         }
-        /* Hiệu ứng Focus: Viền xanh đậm khi bấm vào */
         input:focus, select:focus {
             border-color: var(--secondary); outline: none; background-color: #fff;
             box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
         }
 
         /* BUTTON STYLE */
-        .btn-submit {
+        .btn-submit { 
             margin-top: 10px; background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white; border: none; padding: 16px; border-radius: 8px;
             font-weight: 700; font-size: 1rem; cursor: pointer; width: 100%;
@@ -138,10 +135,10 @@
             transition: var(--transition);
         }
         .btn-submit:hover { filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0, 61, 124, 0.3); }
-        .btn-submit:disabled { background: #bdc3c7; cursor: not-allowed; box-shadow: none; }
+        .btn-submit:disabled { background: #bdc3c7; cursor: not-allowed; box-shadow: none; transform: none; }
 
         /* --- 8. TOAST NOTIFICATION --- */
-        #toast {
+        #toast { 
             visibility: hidden; min-width: 320px; background-color: #fff;
             color: #333; border-radius: 8px; padding: 20px;
             position: fixed; z-index: 1000; right: 30px; bottom: 30px;
@@ -154,10 +151,19 @@
 
         footer { text-align: center; padding: 40px; color: var(--text-light); font-size: 0.9rem; margin-top: 20px; }
 
-        /* Mobile Responsive */
         @media (max-width: 850px) {
             .wrapper { flex-direction: column; }
             .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        /* CSS CHO Ô NHẬP ĐIỂM */
+        .score-input {
+            width: 70px; padding: 8px; border: 1px solid #e2e8f0;
+            border-radius: 6px; text-align: center; font-weight: 700;
+            color: var(--primary); background: #fff; transition: var(--transition);
+        }
+        .score-input:focus {
+            border-color: var(--accent); background: #fffbf0; outline: none;
         }
     </style>
 </head>
@@ -178,7 +184,7 @@
 
     <div class="wrapper"> 
         <aside class="card">
-            <h3><i class="fa-solid fa-bars"></i> Danh mục</h3>
+            <h2><i class="fa-solid fa-bars"></i> Danh mục</h2>
             <ul> 
                 <li><span>Trường Nông Nghiệp</span> <i class="fa-solid fa-chevron-right"></i></li>
                 <li><span>Trường Sư Phạm</span> <i class="fa-solid fa-chevron-right"></i></li>
@@ -188,14 +194,16 @@
             </ul>
         </aside>
     
-        <main>
+        <main> 
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-icon" style="background: rgba(0, 61, 124, 0.1); color: var(--primary);">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div class="stat-info">
-                        <h4>Tổng tín chỉ</h4> <p>11</p>
+                        <h4>Tổng tín chỉ <br>
+                            (Tích lũy) </h4>
+                        <p id="total-credits">0</p>
                     </div>
                 </div>
                 <div class="stat-item">
@@ -203,7 +211,8 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <div class="stat-info">
-                        <h4>Điểm trung bình</h4> <p>8.16</p>
+                        <h4>Điểm trung bình</h4>
+                        <p id="avg-score">0.0</p>
                     </div>
                 </div>
                 <div class="stat-item">
@@ -211,7 +220,7 @@
                         <i class="fa-solid fa-book"></i>
                     </div>
                     <div class="stat-info">
-                        <h4>Số học phần</h4> <p>3</p>
+                        <h4>Số học phần</h4> <p id="total-courses">3</p>
                     </div>
                 </div>
             </div>
@@ -221,52 +230,74 @@
                 <div class="table-responsive">
                     <table>
                         <thead>
-                            <tr> <th>STT</th> <th>Tên HP</th> <th>Tín chỉ</th> <th>Mã HP</th> <th>Điểm</th> </tr>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên HP</th>
+                                <th>Tín chỉ</th>
+                                <th>Mã HP</th>
+                                <th>Giảng viên</th>
+                                <th>Điểm</th>
+                            </tr>
                         </thead>
-                        <tbody>
-                            <tr><td>1</td><td>Toán cao cấp</td><td>3</td><td>A101</td><td><b>8.5</b></td></tr>
-                            <tr><td>2</td><td>Vật lý đại cương</td><td>4</td><td>B202</td><td><b>7.0</b></td></tr>
-                            <tr><td>3</td><td>Hóa học đại cương</td><td>4</td><td>C303</td><td><b>9.0</b></td></tr>
-                            <tr><td>4</td><td>Triết học Mác-Lênin</td><td>3</td><td>D404</td><td><b>8.0</b></td></tr>
+                        <tbody id="table-body">
+                            <tr>
+                                <td>1</td>
+                                <td>Toán cao cấp</td>
+                                <td>3</td>
+                                <td>B2306001</td>
+                                <td>Phan Thuong Cang</td> 
+                                <td><input type="number" class="score-input" min="0" max="10" step="0.1"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Vật lý đại cương</td>
+                                <td>4</td>
+                                <td>B2306034</td>
+                                <td>Lam Chi Nguyen</td> 
+                                <td><input type="number" class="score-input" min="0" max="10" step="0.1"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Hóa học đại cương</td>
+                                <td>4</td>
+                                <td>B2306014</td>
+                                <td>Nguyen Thai Nghe</td> 
+                                <td><input type="number" class="score-input" min="0" max="10" step="0.1"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
             <section class="card">
-                <h2><i class="fa-solid fa-pen-to-square"></i> Đăng ký học phần</h2> 
+                <h2><i class="fa-solid fa-pen-to-square"></i> Đăng ký học phần mới</h2> 
                 <form id="register-form"> 
                     
                     <div class="form-group">
-                        <label for="fullName">Họ và tên</label>
-                        <input type="text" id="fullName" required placeholder="Nhập họ và tên sinh viên...">
+                        <label for="fullName">Họ và tên sinh viên</label>
+                        <input type="text" id="fullName" required placeholder="Nhập họ và tên...">
                     </div>
 
                     <div class="form-group">
-                        <label for="studentId">Mã sinh viên</label>
+                        <label for="studentId">Mã số sinh viên</label>
                         <input type="text" id="studentId" required placeholder="Ví dụ: B220xxxx">
                     </div>
 
                     <div class="form-group">
-                        <label for="faculty">Đơn vị quản lý</label>
-                        <select id="faculty">
-                            <option value="Biotech">Viện Công nghệ Sinh học</option>
-                            <option value="Economics">Trường Kinh tế</option>
-                            <option value="Education">Trường Sư phạm</option>
-                            <option value="CICT">Trường CNTT & TT</option>
-                            <option value="Agriculture">Trường Nông Nghiệp</option>
+                        <label for="course">Học phần muốn đăng ký</label>
+                        <select id="course">
+                            <option value="WebDev">Lập trình Web (3 TC)</option>
+                            <option value="DataStruct">Cấu trúc dữ liệu (4 TC)</option>
+                            <option value="Calculus">Giải tích cơ bản (3 TC)</option>
+                            <option value="DiscreteMath">Toán rời rạc (3 TC)</option>
+                            <option value="Project">Đồ án cơ sở (2 TC)</option>
+                            <option value="PE">Giáo dục thể chất (1 TC)</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="course">Học phần dự định</label>
-                        <select id="course">
-                            <option value="WebDev">Lập trình Web</option>
-                            <option value="DataStruct">Cấu trúc dữ liệu</option>
-                            <option value="Calculus">Giải tích cơ bản</option>
-                            <option value="DiscreteMath">Toán rời rạc</option>
-                            <option value="Database">Cơ sở dữ liệu</option>
-                        </select>
+                        <label for="lecturerName">Giảng viên phụ trách</label>
+                        <input type="text" id="lecturerName" placeholder="Nhập tên giảng viên...">
                     </div>
 
                     <button type="submit" id="btn-submit" class="btn-submit">
@@ -281,77 +312,174 @@
     <div id="toast">
         <i class="fa-solid fa-circle-check"></i>
         <div>
-            <h4 style="margin:0; font-size: 1rem; font-weight: 700;">Thành công!</h4>
+            <h2 style="margin:0; font-size: 1rem; font-weight: 700;">Thành công!</h2>
             <p id="toast-message" style="margin:5px 0 0; font-size: 0.95rem; color: #555;"></p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Đại học Cần Thơ - Developed by Phuc Sang - V4.0</p>
+        <p>&copy; 2026 Đại học Cần Thơ - Developed by Phuc Sang</p>
     </footer>
 
     <script> 
-        // 1. Tối ưu: Dùng biến const/let để quản lý bộ nhớ tốt hơn
+        // 1. KHAI BÁO BIẾN
         const form = document.getElementById('register-form');
         const btnSubmit = document.getElementById('btn-submit');
         const btnText = document.getElementById('btn-text');
         const btnIcon = document.getElementById('btn-icon');
         const toast = document.getElementById('toast');
         const toastMessage = document.getElementById('toast-message');
+        const tableBody = document.getElementById('table-body');
         
-        // Biến lưu timeout để ngăn lỗi khi toast xuất hiện liên tục
+        // Các biến hiển thị
+        const totalCreditsDisplay = document.getElementById('total-credits');
+        const avgScoreDisplay = document.getElementById('avg-score');
+        const totalCoursesDisplay = document.getElementById('total-courses');
+
         let toastTimeout; 
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
+        // === KHỞI TẠO: TÍNH TOÁN LẦN ĐẦU ===
+        updateStats();
 
-            // 2. UX: Hiệu ứng Loading
+        // === SỰ KIỆN 1: NHẬP ĐIỂM (REAL-TIME) ===
+        tableBody.addEventListener('input', function(event) {
+            if (event.target.classList.contains('score-input')) {
+                updateStats(); 
+            }
+        });
+
+        // === SỰ KIỆN 2: SUBMIT FORM (CÓ LOADING) ===
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Chặn load lại trang
+            
+            // BẮT ĐẦU TRẠNG THÁI LOADING
             setLoadingState(true);
 
-            // 3. Lấy dữ liệu
+            // Lấy dữ liệu từ form
             const fullName = document.getElementById('fullName').value;
             const studentId = document.getElementById('studentId').value;
-            const courseText = document.getElementById('course').options[document.getElementById('course').selectedIndex].text;
+            const lecturerName = document.getElementById('lecturerName').value || "Chưa phân công"; 
+            const courseSelect = document.getElementById('course');
+            const courseText = courseSelect.options[courseSelect.selectedIndex].text;
+            const courseValue = courseSelect.value;
 
-            // 4. Giả lập gọi API (Server) - Delay 1.5s
+            // Tạo object sinh viên mới
+            const newStudent = {
+                id: studentId,
+                course: courseText,
+                courseVal: courseValue, // Để tính tín chỉ
+                lecturer: lecturerName,
+                score: "" // Mặc định chưa có điểm
+            };
+
+            // GIẢ LẬP GỬI DỮ LIỆU (Delay 1.5 giây để thấy hiệu ứng loading)
             setTimeout(function() {
+                // 1. Thêm vào bảng
+                addStudentToTable(newStudent);
                 
-                // Hiển thị thông báo
-                showToast(`Sinh viên <b>${fullName}</b> (${studentId})<br>đã đăng ký thành công môn: <b>${courseText}</b>`);
-
-                // Reset form
+                // 2. Hiện thông báo Toast
+                showToast(`Đã thêm học phần <b>${newStudent.course}</b>`);
+                
+                // 3. Reset form và tắt Loading
                 form.reset();
-                
-                // Tắt trạng thái Loading
                 setLoadingState(false);
-
+                
+                // 4. Cập nhật lại thống kê (Số môn học tăng lên)
+                updateStats(); 
             }, 1500); 
         });
 
-        // Hàm bật/tắt trạng thái Loading của nút bấm
+        // === HÀM LOGIC: TÍNH TOÁN ĐIỂM TRUNG BÌNH ===
+        function updateStats() {
+            let totalCredits = 0;      // Tổng tín chỉ tích lũy
+            let totalScoreProduct = 0; // Tổng (Điểm x Tín chỉ)
+            let courseCount = 0;       // Đếm số môn học
+
+            const rows = tableBody.querySelectorAll('tr');
+            courseCount = rows.length;
+
+            rows.forEach(row => {
+                // Lấy tín chỉ (Cột 3)
+                const creditText = row.cells[2].innerText;
+                const credit = parseInt(creditText) || 0;
+
+                // Lấy điểm (Input trong cột 6)
+                const inputScore = row.querySelector('.score-input');
+                
+                // LOGIC QUAN TRỌNG:
+                // Chỉ tính điểm nếu ô input KHÔNG RỖNG
+                if (inputScore && inputScore.value !== "") {
+                    const score = parseFloat(inputScore.value);
+                    if (!isNaN(score)) {
+                        totalCredits += credit;
+                        totalScoreProduct += (score * credit);
+                    }
+                }
+            });
+
+            // Tính toán kết quả
+            let average = 0;
+            if (totalCredits > 0) {
+                average = totalScoreProduct / totalCredits;
+            }
+
+            // Hiển thị ra màn hình
+            totalCreditsDisplay.innerText = totalCredits;
+            avgScoreDisplay.innerText = average.toFixed(2);
+            totalCoursesDisplay.innerText = courseCount;
+        }
+
+        // === HÀM HỖ TRỢ: THÊM DÒNG VÀO BẢNG ===
+        function addStudentToTable(student) {
+            const nextSTT = tableBody.rows.length + 1;
+            
+            // Map số tín chỉ dựa trên môn học (Giả lập)
+            let credits = 3; // Mặc định
+            if (student.courseVal === 'DataStruct' || student.courseVal === 'BioChem') credits = 4;
+            if (student.courseVal === 'PE') credits = 1;
+            if (student.courseVal === 'Project') credits = 2;
+
+            // Xử lý tên môn học (Bỏ phần số TC trong ngoặc nếu có)
+            const displayCourseName = student.course.split('(')[0].trim();
+
+            const newRowHtml = `
+                <tr style="animation: fadeInUp 0.5s ease">
+                    <td>${nextSTT}</td>
+                    <td>${displayCourseName}</td>
+                    <td>${credits}</td> 
+                    <td>${student.id}</td>
+                    <td>${student.lecturer}</td>
+                    <td>
+                        <input type="number" class="score-input" placeholder="0.0" min="0" max="10" step="0.1">
+                    </td>                
+                </tr>
+            `;
+            tableBody.insertAdjacentHTML('beforeend', newRowHtml);
+        }
+
+        // === HÀM HỖ TRỢ: TRẠNG THÁI LOADING ===
         function setLoadingState(isLoading) {
             if (isLoading) {
                 btnSubmit.disabled = true;
                 btnText.innerText = "ĐANG XỬ LÝ...";
-                btnIcon.className = "fa-solid fa-spinner fa-spin";
+                btnIcon.className = "fa-solid fa-spinner fa-spin"; // Icon xoay
+                btnSubmit.style.opacity = "0.7";
             } else {
                 btnSubmit.disabled = false;
                 btnText.innerText = "XÁC NHẬN ĐĂNG KÝ";
                 btnIcon.className = "fa-solid fa-paper-plane";
+                btnSubmit.style.opacity = "1";
             }
         }
 
-        // Hàm hiển thị Toast thông minh (Debounce)
+        // === HÀM HỖ TRỢ: HIỆN THÔNG BÁO ===
         function showToast(messageHtml) {
             toastMessage.innerHTML = messageHtml;
-            toast.className = "show"; 
-
-            // Xóa timeout cũ nếu có (để tránh lỗi ẩn sớm)
+            toast.classList.add("show");
+            
             if (toastTimeout) clearTimeout(toastTimeout);
-
-            // Đặt timeout mới để ẩn sau 4s
             toastTimeout = setTimeout(function(){ 
-                toast.className = toast.className.replace("show", ""); 
+                toast.classList.remove("show");
             }, 4000);
         }
     </script>
