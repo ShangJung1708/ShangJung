@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Đồ Án PC Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container noi-dung-header">
+            <div class="hop-logo">
+                <a href="#">
+                    <img src="Logo.png" alt="PC Store Logo"> 
+                </a>
+            </div>
+
+            <nav class="menu-chinh">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-info"></i> Giới thiệu</a></li>
+                    <li class="dang-chon"><a href="#"><i class="fa-solid fa-microchip"></i> Sản phẩm</a></li>
+                    <li><a href="#"><i class="fa-solid fa-newspaper"></i> Tin tức</a></li>
+                </ul>
+            </nav>
+
+            <div class="khu-vuc-tai-khoan">
+                <a href="#" class="nut-gio-hang">
+                    <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span>
+                </a>
+                <a href="#" class="nut-dang-nhap">
+                    <i class="fa-solid fa-user"></i> <span>Đăng nhập</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tieu-de-trang">
+                <h1>GIỎ HÀNG CỦA BẠN</h1>
+                <div class="icon-trang-tri">
+                    <i class="fa-solid fa-cart-flatbed"></i>
+                </div>
+            </div>
+
+            <div class="danh-sach-san-pham">
+                <div class="the-san-pham">
+                    <div class="cot-hinh-anh">
+                        <img src="Core I5.png" alt="CPU i5">
+                        <div class="thong-so-nho">
+                            <span><i class="fa-solid fa-microchip"></i> 14 nhân</span>
+                            <span><i class="fa-solid fa-bolt"></i> 3.5GHz</span>
+                        </div>
+                    </div>
+
+                    <div class="cot-thong-tin">
+                        <h3>CPU Intel Core i5 14600KF (Raptor Lake Refresh)</h3>
+                        <div class="hop-gia">
+                            <span class="gia-moi">6.999.000₫</span>
+                            <span class="gia-cu">8.790.000₫</span>
+                        </div>
+                        
+                        <div class="bo-dk-so-luong">
+                            <button class="nut-tron nut-tru" aria-label="Giảm số lượng"><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" value="1" class="o-nhap-so-luong" readonly>
+                            <button class="nut-tron nut-cong" aria-label="Tăng số lượng"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cot-hanh-dong">
+                        <div class="nhan-thanh-tien">Thành tiền:</div>
+                        <div class="tong-tien-sp">6.999.000₫</div>
+                        <button class="nut-thanh-toan-don">Thanh toán</button>
+                        <a href="#" class="nut-xoa"><i class="fa-solid fa-trash-can"></i> Xóa</a>
+                    </div>
+                </div>
+
+                <div class="the-san-pham">
+                    <div class="cot-hinh-anh">
+                        <img src="Core I5.png" alt="CPU i5">
+                        <div class="thong-so-nho">
+                            <span><i class="fa-solid fa-microchip"></i> 14 nhân</span>
+                            <span><i class="fa-solid fa-bolt"></i> 3.5GHz</span>
+                        </div>
+                    </div>
+
+                    <div class="cot-thong-tin">
+                        <h3>CPU Intel Core i5 14600KF (Raptor Lake Refresh)</h3>
+                        <div class="hop-gia">
+                            <span class="gia-moi">6.999.000₫</span>
+                            <span class="gia-cu">8.790.000₫</span>
+                        </div>
+                        
+                        <div class="bo-dk-so-luong">
+                            <button class="nut-tron nut-tru"><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" value="2" class="o-nhap-so-luong" readonly>
+                            <button class="nut-tron nut-cong"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cot-hanh-dong">
+                        <div class="nhan-thanh-tien">Thành tiền:</div>
+                        <div class="tong-tien-sp">13.998.000₫</div>
+                        <button class="nut-thanh-toan-don">Thanh toán</button>
+                        <a href="#" class="nut-xoa"><i class="fa-solid fa-trash-can"></i> Xóa</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tong-ket-gio-hang">
+                <button class="nut-thanh-toan-het">THANH TOÁN TẤT CẢ</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container noi-dung-footer">
+            <div class="cot-footer">
+                <h4>MÔ TẢ</h4>
+                <p>PC Store chuyên cung cấp linh kiện máy tính chính hãng, build PC theo yêu cầu với mức giá tốt nhất thị trường.</p>
+            </div>
+            <div class="cot-footer">
+                <h4>DANH MỤC</h4>
+                <ul>
+                    <li><a href="#">CPU - Vi xử lý</a></li>
+                    <li><a href="#">VGA - Card màn hình</a></li>
+                    <li><a href="#">Mainboard - Bo mạch chủ</a></li>
+                    <li><a href="#">RAM - Bộ nhớ trong</a></li>
+                </ul>
+            </div>
+            <div class="cot-footer">
+                <h4>HỖ TRỢ</h4>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Kiểm tra đơn hàng</a></li>
+                </ul>
+            </div>
+            <div class="cot-footer">
+                <h4>LIÊN HỆ</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Số 67, Đường 3/2, Cần Thơ</li>
+                    <li><i class="fa-solid fa-phone"></i> 0909.123.456</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@pcstore.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="chan-trang-duoi">
+            <p>&copy; Nhóm 02 - Phúc Sang - B2306033 - Đồ án học phần.</p>
+        </div>
+    </footer>
+</body>
+</html>
